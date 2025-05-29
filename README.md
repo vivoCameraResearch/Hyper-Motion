@@ -1,5 +1,5 @@
-# HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions (coming soon)
-This repository is the official implementation of [HyperMotion](https://vivocameraresearch.github.io/hypermotion/)
+# HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions
+This repository is the official implementation of [HyperMotion](https://vivocameraresearch.github.io/hypermotion/) (coming soon)
 
 <a href=""><img src='https://img.shields.io/badge/arXiv-2501.11325-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'></a>&nbsp;
 <a href="https://vivocameraresearch.github.io/hypermotion/"><img src='https://img.shields.io/badge/Project-Page-Green' alt='GitHub'></a>&nbsp;
