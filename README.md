@@ -18,3 +18,15 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 - [ ] Release the pretrained weights
 - [ ] Release the testing file
 - [ ] Release the training file
+
+<pre> 
+  @misc{xu2025hypermotion,
+    title={HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions}, 
+    author={Shuolin Xu and Siming Zheng and Ziyi Wang and HC Yu and Jinwei Chen and Huaqi Zhang and Bo Li and Peng-Tao Jiang},
+    year={2025},
+    eprint={2505.22977},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2505.22977}, 
+  }
+</pre>
