@@ -19,6 +19,10 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 - [ ] Release the testing file
 - [ ] Release the training file
 
+## Inference
+
+
+
 <pre> 
   @misc{xu2025hypermotion,
     title={HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions}, 
