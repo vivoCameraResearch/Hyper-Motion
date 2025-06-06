@@ -8,8 +8,8 @@ This repository is the official implementation of [HyperMotion](https://vivocame
 
 ## News:
 We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.
-### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!.
-
+### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!.
+We will complete the review of the training dataset in the near future, and we will release the bench data to the applicants first.
 ## ✅ To-Do List for HyperMotion Release
 
 - [✅] Release the Open-HypermotionX dataset
