@@ -38,7 +38,8 @@ The detailed of Linux:
 - CUDNN: 8+
 - GPU：Nvidia-V100 16G & Nvidia-A10 24G & Nvidia-A100 40G & Nvidia-A100 80G
 
-We need about 60GB available on disk (for saving weights), please check!
+We need about 60GB available on disk (for saving weights), please check!(train）
+But just for inference only need < 24GB, even 16GB! So single RTX4090 is enough.
 
 ### ⚠ About H20 GPU's bug, if yor meet the error about bf16 for train or inference please reference the [Link](https://github.com/vllm-project/vllm/issues/4392)
 
