@@ -14,7 +14,7 @@ We will complete the review of the training dataset in the near future, and we w
 
 - [✅] Release the Open-HypermotionX dataset
 - [✅] Release the HypermotionX bench
-- [ ] Release the source code
+- [✅] Release the source code
 - [ ] Release the pretrained weights
 - [ ] Release the testing file
 - [ ] Release the training file
