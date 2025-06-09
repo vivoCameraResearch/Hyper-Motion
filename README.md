@@ -43,7 +43,7 @@ We need about 60GB available on disk (for saving weights), please check!
 
 ### ⚠ About H20 GPU's bug, if yor meet the error about bf16 for train or inference please reference the [Link](https://github.com/vllm-project/vllm/issues/4392)
 
-## Checkpoint download
+## ⬇️ Checkpoint download
 
 hyper-wan2.1-14B
 
