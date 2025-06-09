@@ -18,11 +18,35 @@ We will complete the review of the training dataset in the near future, and we w
 - [ ] Release the pretrained weights
 - [ ] Release the testing file
 - [ ] Release the training file
+      
+## ⚙ Install
+We have verified this repo execution on the following environment:
+
+The detailed of Windows:
+- OS: Windows 10
+- python: python3.10 & python3.11
+- pytorch: torch2.2.0
+- CUDA: 11.8 & 12.1
+- CUDNN: 8+
+- GPU： Nvidia-3060 12G & Nvidia-3090 24G
+
+The detailed of Linux:
+- OS: Ubuntu 20.04, CentOS
+- python: python3.10 & python3.11
+- pytorch: torch2.2.0
+- CUDA: 11.8 & 12.1
+- CUDNN: 8+
+- GPU：Nvidia-V100 16G & Nvidia-A10 24G & Nvidia-A100 40G & Nvidia-A100 80G
+
+We need about 60GB available on disk (for saving weights), please check!
+
+### ⚠ About H20 GPU's bug, if yor meet the error about bf16 for train or inference please reference the [Link](https://github.com/vllm-project/vllm/issues/4392)
 
 ## 😁 Inference
 
+
 ## 😘 Acknowledgement
-Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main). We adopt [Wan2.1-I2V-14B](https://github.com/Wan-Video/Wan2.1) as the base model. And we referenced [UniAnimate](https://github.com/ali-vilab/UniAnimate), Our data is inherited from [Motion-X](https://github.com/IDEA-Research/Motion-X), then we use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to deal with videos, and [InternVL2](https://github.com/OpenGVLab/InternVL) to generate text dic. We use [Xpose](https://github.com/IDEA-Research/X-Pose) to generate pose video. Thanks to all the contributors! Special thanks to Video-Fun, without that work as a foundation there would be no work for us!
+Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main). We adopt [Wan2.1-I2V-14B](https://github.com/Wan-Video/Wan2.1) as the base model. And we referenced [UniAnimate](https://github.com/ali-vilab/UniAnimate), Our data is inherited from [Motion-X](https://github.com/IDEA-Research/Motion-X), then we use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to deal with videos, and [InternVL2](https://github.com/OpenGVLab/InternVL) to generate text dic. We use [Xpose](https://github.com/IDEA-Research/X-Pose) to generate pose video. Thanks to all the contributors! Special thanks to VideoX-Fun, without that work as a foundation there would be no work for us!
 
 <pre> 
   @misc{xu2025hypermotion,
