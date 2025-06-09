@@ -1,0 +1,1 @@
+from .pipeline_wan_hyper import WanhyperPipeline
