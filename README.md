@@ -6,7 +6,7 @@ This repository is the official implementation of [HyperMotion](https://vivocame
 <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src='https://img.shields.io/badge/License-CC BY--NC--SA--4.0-lightgreen?style=flat&logo=Lisence' alt='License'></a>&nbsp;
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header"><img src='https://img.shields.io/badge/Dataset-HypermotionX-Green' alt='GitHub'></a>&nbsp;
 
-## News:
+## 📣 News:
 We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.
 ### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!.
 We will complete the review of the training dataset in the near future, and we will release the bench data to the applicants first.
@@ -19,9 +19,10 @@ We will complete the review of the training dataset in the near future, and we w
 - [ ] Release the testing file
 - [ ] Release the training file
 
-## Inference
+## 😁 Inference
 
-
+## 😘 Acknowledgement
+Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main). We adopt [Wan2.1-I2V-14B](https://github.com/Wan-Video/Wan2.1) as the base model. And we referenced [UniAnimate](https://github.com/ali-vilab/UniAnimate), Our data is inherited from [Motion-X](https://github.com/IDEA-Research/Motion-X), then we use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to deal with videos, and [InternVL2](https://github.com/OpenGVLab/InternVL) to generate text dic. We use [Xpose](https://github.com/IDEA-Research/X-Pose) to generate pose video. Thanks to all the contributors! Special thanks to Video-Fun, without that work as a foundation there would be no work for us!
 
 <pre> 
   @misc{xu2025hypermotion,
