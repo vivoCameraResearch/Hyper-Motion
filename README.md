@@ -24,9 +24,9 @@ We have verified this repo execution on the following environment:
 
 The detailed of Windows:
 - OS: Windows 10
-- python: python3.10 & python3.11
+- python: python3.10 & python3.12
 - pytorch: torch2.2.0
-- CUDA: 11.8 & 12.1
+- CUDA: 11.8 & 12.1 &12.3
 - CUDNN: 8+
 - GPU： Nvidia-3060 12G & Nvidia-3090 24G
 
@@ -34,9 +34,17 @@ The detailed of Linux:
 - OS: Ubuntu 20.04, CentOS
 - python: python3.10 & python3.11
 - pytorch: torch2.2.0
-- CUDA: 11.8 & 12.1
+- CUDA: 11.8 & 12.1 & 12.3
 - CUDNN: 8+
 - GPU：Nvidia-V100 16G & Nvidia-A10 24G & Nvidia-A100 40G & Nvidia-A100 80G
+
+```shell
+# python==3.12.9 cuda==12.3 torch==2.2
+conda create -n hypermotion python==3.12.9
+conda activate hypermotion
+pip install -r requirements.txt
+```
+⚠ If you encounter an error while installing Flash Attention, please [**manually download**](https://github.com/Dao-AILab/flash-attention/releases) the installation package based on your Python version, CUDA version, and Torch version, and install it using `pip install flash_attn-2.7.3+cu12torch2.2cxx11abiFALSE-cp312-cp312-linux_x86_64.whl`.
 
 We need about 60GB available on disk (for saving weights), please check!
 ### ⚠ But just for inference only need < 24GB, even 16GB! So single RTX4090 is enough.
