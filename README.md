@@ -2,7 +2,8 @@
 This repository is the official implementation of [HyperMotion](https://vivocameraresearch.github.io/hypermotion/)
 
 <a href="https://arxiv.org/abs/2505.22977"><img src='https://img.shields.io/badge/arXiv-2505.22977-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'></a>&nbsp;
-<a href="https://vivocameraresearch.github.io/hypermotion/"><img src='https://img.shields.io/badge/Project-Page-Green' alt='GitHub'></a>&nbsp;
+<a href='https://vivocameraresearch.github.io/hypermotion/'>
+  <img src='https://img.shields.io/badge/Project-Page-pink?style=flat&logo=Google%20chrome&logoColor=pink'></a>
 <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src='https://img.shields.io/badge/License-CC BY--NC--SA--4.0-lightgreen?style=flat&logo=Lisence' alt='License'></a>&nbsp;
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header"><img src="https://img.shields.io/static/v1?label=HypermotionX&message=Dataset&color=purple"></a> &ensp;
 
@@ -18,7 +19,15 @@ We will complete the review of the training dataset in the near future, and we w
 - [ ] Release the pretrained weights
 - [ ] Release the testing file
 - [ ] Release the training file
-      
+
+## 👀 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) dataset
+We are so sorry that due to force majeure caused by company's regulations, we can't upload the processed training set‘s videos directly, but we will give you the complete ways to get the HypermotionX training data from Motion-X.  Including video name ID, original pose annotation, Follow these steps to process the Motion-X dataset:
+
+### 1. Download Motion-X Dataset (The completed form will be sent immediately)
+Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeb1DwnzGPxXWWjXr8cLFPAYd3ZHlWUtRDAzYoGvAKmS4uBlA/viewform) to request authorization to use Motion-X for non-commercial purposes. Then you will receive an email and please download the motion and text labels from the provided downloading links. The pose texts can be downloaded from [here](https://drive.google.com/file/d/168ja-oBTHM0QDKFIcRriQFPew5gUlZkQ/view?usp=sharing).
+
+
+
 ## ⚙ Install
 We have verified this repo execution on the following environment:
 
