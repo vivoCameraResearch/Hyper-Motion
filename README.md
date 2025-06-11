@@ -26,7 +26,42 @@ We are so sorry that due to force majeure caused by company's regulations, we ca
 ### 1. Download Motion-X Dataset (The completed form will be sent immediately)
 Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeb1DwnzGPxXWWjXr8cLFPAYd3ZHlWUtRDAzYoGvAKmS4uBlA/viewform) to request authorization to use Motion-X for non-commercial purposes. Then you will receive an email and please download the motion and text labels from the provided downloading links. The pose texts can be downloaded from [here](https://drive.google.com/file/d/168ja-oBTHM0QDKFIcRriQFPew5gUlZkQ/view?usp=sharing).
 
+- Please collect them as the following directory structure, We only use the following parts of the data:
+```
+../Motion-X++ 
 
+├──  video
+  ├── perform.zip
+  ├── music.zip
+  ├── Kungfu.zip
+  ├── idea400.zip
+  ├── humman.zip
+  ├── haa500.zip
+  ├── animation.zip
+  ├── fitness.zip(no need)
+├──  text
+  ├── wholebody_pose_description(no need)
+  ├── semantic_label
+    ├── perform.zip
+    ├── music.zip
+    ├── Kungfu.zip
+    ├── idea400.zip
+    ├── humman.zip
+    ├── haa500.zip
+    ├── animation.zip
+├── motion
+  ├──  motiion_generation(no need)
+  ├──  mesh_recovery(no_need)
+  ├──  keypoints
+    ├── perform.zip
+    ├── music.zip
+    ├── Kungfu.zip
+    ├── idea400.zip
+    ├── humman.zip
+    ├── haa500.zip
+    ├── animation.zip
+```
+Unzip all files
 
 ## ⚙ Install
 We have verified this repo execution on the following environment:
