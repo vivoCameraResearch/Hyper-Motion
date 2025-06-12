@@ -61,6 +61,8 @@ Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeb1DwnzGPx
     ├── animation.zip
 ```
 Unzip all files.
+### 2. Filter the required source video based on the video ID list provided
+
 
 ## ⚙ Install
 We have verified this repo execution on the following environment:
