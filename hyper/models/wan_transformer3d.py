@@ -320,8 +320,8 @@ def rope_apply_with_alllens(
     low_ratio: float = 0.30   # proportion of "lowest frequency" channels to amplify
 ):
     """
-    Amplify the RoPE angular frequencies of H/W high-frequency channels for all frames; time dimension remains unchanged.
-    对所有帧放大 H/W 高频通道的 RoPE 角频率；时间维不变。
+    Amplify the RoPE angular frequencies of H/W low-frequency channels for all frames; time dimension remains unchanged.
+    对所有帧放大 H/W 低频通道的 RoPE 角频率；时间维不变。
     """
     B, S, N, D = x.shape
     _, c = N, D // 2 #N, D/2
