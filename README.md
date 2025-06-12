@@ -109,11 +109,11 @@ control_video           = "......./test.mp4"
 ref_image               = "......./image.jpg"
 ```
 ### Second step
-Running inference script.
+- Running inference script.
 ```
 python inference.py
 ```
-Batch inference script.
+- Batch inference script.
 ```
 json_path = "............../inference_config.json"
 save_path = "......../sample/results"
