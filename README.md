@@ -91,10 +91,11 @@ pip install -r requirements.txt
 ```
 ⚠ If you encounter an error while installing Flash Attention, please [**manually download**](https://github.com/Dao-AILab/flash-attention/releases) the installation package based on your Python version, CUDA version, and Torch version, and install it using `pip install flash_attn-2.7.3+cu12torch2.2cxx11abiFALSE-cp312-cp312-linux_x86_64.whl`.
 
-We need about 60GB available on disk (for saving weights), please check!
-### ⚠ But just for inference only need < 24GB, even 16GB! So single RTX4090 is enough.
+⚠ We need about 60GB available on disk (for saving weights), please check!
 
-### ⚠ About H20 GPU's bug, if yor meet the error about bf16 for train or inference please reference the [Link](https://github.com/vllm-project/vllm/issues/4392)
+⚠ But just for inference only need < 24GB, even 16GB! So single RTX4090 is enough.
+
+⚠ About H20 GPU's bug, if yor meet the error about bf16 for train or inference please reference the [Link](https://github.com/vllm-project/vllm/issues/4392)
 
 ## ⬇️ Checkpoint download
 
