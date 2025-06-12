@@ -16,9 +16,9 @@ We will complete the review of the training dataset in the near future, and we w
 - [✅] Release the Open-HypermotionX dataset
 - [✅] Release the HypermotionX bench
 - [✅] Release the source code
+- [✅] Release the inference file
 - [ ] Release the pretrained weights
-- [ ] Release the testing file
-- [ ] Release the training file
+- [ ] Release the training file(wan14B 8*H20 96G sft)
 
 ## 👀 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) dataset
 We are so sorry that due to force majeure caused by company's regulations, we can't upload the processed training set‘s videos directly, but we will give you the complete ways to get the HypermotionX training data from Motion-X.  Including video name ID, original pose annotation, **Follow these steps to process the Motion-X dataset:**
