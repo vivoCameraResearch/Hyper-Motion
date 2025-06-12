@@ -67,14 +67,6 @@ Unzip all files.
 ## ⚙ Install
 We have verified this repo execution on the following environment:
 
-The detailed of Windows:
-- OS: Windows 10
-- python: python3.10 & python3.12
-- pytorch: torch2.2.0
-- CUDA: 11.8 & 12.1 &12.3
-- CUDNN: 8+
-- GPU： Nvidia-3060 12G & Nvidia-3090 24G
-
 The detailed of Linux:
 - OS: Ubuntu 20.04, CentOS
 - python: python3.10 & python3.11
@@ -104,6 +96,18 @@ hyper-wan2.1-14B(asap,Review and upload will take some time)
 ## 😁 Inference
 ### First step
 - Go to scripts/inference.py and set the path of model weights and input conditions correctly.
+```
+# Config and model path
+config_path         = "config/wan2.1/wan_civitai.yaml"
+# model path
+model_name          = "........./model/hypermotion_14B"
+.......
+# Use torch.float16 if GPU does not support torch.bfloat16
+# ome graphics cards, such as v100, 2080ti, do not support torch.bfloat16
+weight_dtype            = torch.bfloat16
+control_video           = "......./test.mp4"
+ref_image               = "......./image.jpg"
+```
 
 ## 😘 Acknowledgement
 Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main). We adopt [Wan2.1-I2V-14B](https://github.com/Wan-Video/Wan2.1) as the base model. And we referenced [UniAnimate](https://github.com/ali-vilab/UniAnimate), Our data is inherited from [Motion-X](https://github.com/IDEA-Research/Motion-X), then we use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to deal with videos, and [InternVL2](https://github.com/OpenGVLab/InternVL) to generate text dic. We use [Xpose](https://github.com/IDEA-Research/X-Pose) to generate pose video. Thanks to all the contributors! Special thanks to [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main), without that work as a foundation there would be no work for us!
