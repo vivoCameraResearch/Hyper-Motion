@@ -100,13 +100,13 @@ hyper-wan2.1-14B(asap,Review and upload will take some time)
 # Config and model path
 config_path         = "config/wan2.1/wan_civitai.yaml"
 # model path
-model_name          = "........./model/hypermotion_14B"
+model_name          = "........./model/hypermotion_14B" # model checkpoints
 .......
 # Use torch.float16 if GPU does not support torch.bfloat16
 # ome graphics cards, such as v100, 2080ti, do not support torch.bfloat16
 weight_dtype            = torch.bfloat16
-control_video           = "......./test.mp4"
-ref_image               = "......./image.jpg"
+control_video           = "......./test.mp4" # guided pose video
+ref_image               = "......./image.jpg" # reference image
 ```
 ### Second step
 - Running inference script.
