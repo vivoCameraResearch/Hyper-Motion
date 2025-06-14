@@ -62,7 +62,15 @@ Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeb1DwnzGPx
 ```
 Unzip all files.
 ### 2. Filter the required source video based on the video ID list provided
-
+```
+cd train_data_processing
+python fetch_videos_by_id.py \
+  --json ./video_metadata.json \
+  --source /data/motionX/video/ \
+  --target /data/datasets/filtered_videos/ \
+  --ext .mp4
+```
+### 3. Filter the required source kepoints files based on the json ID list provided
 
 ## ⚙ Install
 We have verified this repo execution on the following environment:
