@@ -22,6 +22,10 @@ We will complete the review of the training dataset in the near future, and we w
 
 ## 👀 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X).
 We are so sorry that due to force majeure caused by company's regulations, we can't upload the processed training set‘s videos directly, but we will give you the complete ways to get the HypermotionX training data from Motion-X.  Including video name ID, original pose annotation, **Follow these steps to process the Motion-X dataset:**
+
+<details>
+<summary>📍Click to expand detailed instructions📍</summary>
+  
 ### 1. Download Motion-X Dataset (The completed form will be sent immediately)
 Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeb1DwnzGPxXWWjXr8cLFPAYd3ZHlWUtRDAzYoGvAKmS4uBlA/viewform) to request authorization to use Motion-X for non-commercial purposes. Then you will receive an email and please download the motion and text labels from the provided downloading links. The pose texts can be downloaded from [here](https://drive.google.com/file/d/168ja-oBTHM0QDKFIcRriQFPew5gUlZkQ/view?usp=sharing).
 
@@ -89,6 +93,8 @@ Data structure:
   ├── ...
 ```
 At this moment we have all the source data for the hyprtmotionX dataset.
+
+</details>
 
 ## ⚙ Install
 We have verified this repo execution on the following environment:
