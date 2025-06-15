@@ -68,9 +68,27 @@ python fetch_videos_by_id.py \
   --json ./video_metadata.json \
   --source /data/motionX/video/ \
   --target /data/datasets/filtered_videos/ \
-  --ext .mp4
+  --video_ext .mp4
 ```
 ### 3. Filter the required source kepoints files based on the json ID list provided
+```
+python fetch_videos_by_id.py \
+  --json ./video_metadata.json \
+  --source /data/motionX/motion/keypoints/ \
+  --target /data/datasets/filtered_kpts/ \
+  --extra_exts .json
+```
+Data structure:
+```
+/data/filtered_videos/
+  ├── backflip_8_clip1.mp4
+  ├── ...
+
+/data/filtered_keypoints/
+  ├── backflip_8_clip1.json
+  ├── ...
+```
+At this moment we have all the source data for the hyprtmotionX dataset.
 
 ## ⚙ Install
 We have verified this repo execution on the following environment:
