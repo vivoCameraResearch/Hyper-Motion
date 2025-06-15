@@ -125,6 +125,25 @@ pip install -r requirements.txt
 
 hyper-wan2.1-14B(asap,Review and upload will take some time)
 
+## 🗿 Inference data preparation
+### How to use [Xpose](https://github.com/IDEA-Research/X-Pose) to get Pose video
+ You can download the pretrained weights of Xpose from [here](https://drive.google.com/file/d/13gANvGWyWApMFTAtC3ntrMgx0fOocjIa/view) and put it under `./XPose/weights`.
+```
+git clone https://github.com/IDEA-Rensearch/X-Pose.git
+cd X-Pose
+
+pip install -r requirements.txt
+
+cd models/UniPose/ops
+python setup.py build install
+# unit test (should see all checking is True)
+python test.py
+cd ../../..
+
+mv ./xpose_batch_inference.py ./XPose
+```
+
+
 ## 😁 Inference
 ### First step
 - Go to scripts/inference.py and set the path of model weights and input conditions correctly.
