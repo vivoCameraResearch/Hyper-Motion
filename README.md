@@ -159,7 +159,7 @@ python ocr_mask.py
 
 rm -r ./data/datasets/videos
 ```
-# If vscode dosen't show videos, please run the scripts
+#### If vscode dosen't show videos, please run the scripts
 ```
 python batch_convert_to_h264.py
     --input_dir ./data/datasets/gt_videos \
