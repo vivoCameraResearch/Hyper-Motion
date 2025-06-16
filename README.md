@@ -229,6 +229,10 @@ pip install -r requirements.txt
 ## ⬇️ Checkpoint download
 
 hyper-wan2.1-14B(asap,Review and upload will take some time)
+```
+# Add HF_ENDPOINT=https://hf-mirror.com before the command if you cannot access to huggingface.com
+huggingface-cli download ... --local-dir-use-symlinks False --local-dir /PATH/TO/ckpts
+```
 
 ## 🗿 Inference data preparation
 ### Why use [Xpose](https://github.com/IDEA-Research/X-Pose)?
