@@ -1,4 +1,9 @@
-# HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions
+<h2> 
+  <a href="https://arxiv.org/abs/2505.22977">
+    HyperMotion: DiT-Based Pose-Guided Human Image Animation of Complex Motions
+  </a>
+</h2>
+
 This repository is the official implementation of [HyperMotion](https://vivocameraresearch.github.io/hypermotion/)
 
 <a href="https://arxiv.org/abs/2505.22977"><img src='https://img.shields.io/badge/arXiv-2505.22977-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'></a>&nbsp;
@@ -9,12 +14,12 @@ This repository is the official implementation of [HyperMotion](https://vivocame
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header"><img src="https://img.shields.io/static/v1?label=HypermotionX&message=Dataset&color=green"></a> &ensp;
 
 ## 📣 News:
-We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.
-🎉 We have sent data to the first batch of applicants!
+We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.  
+🎉 We have sent data to the first batch of applicants!  
 🎉 Now you can download the weights from 🤗[**HuggingFace**](https://huggingface.co/shuolin/HyperMotion).
 
 <div align="center">
-  <img src="asset/model.png" width="100%" height="100%"/>
+  <img src="demo/baseline.png" width="100%" height="100%"/>
 </div>
 
 ### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!
