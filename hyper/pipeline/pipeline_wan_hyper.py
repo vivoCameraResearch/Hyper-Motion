@@ -627,7 +627,7 @@ class WanFunControlPipeline(DiffusionPipeline):
 
             B, _, T, H, W = latents.shape
             ref_msk = torch.zeros((B, 4, T, H, W), device=latents.device, dtype=latents.dtype)
-            ref_msk[:, :, 0] = 1.0  # 第0帧是参考图
+            ref_msk[:, :, 0] = 1.0
 
             ref_image_latentes_conv_in = (
                 torch.cat([ref_image_latentes_conv_in] * 2) if do_classifier_free_guidance else ref_image_latentes_conv_in
@@ -635,9 +635,6 @@ class WanFunControlPipeline(DiffusionPipeline):
             ref_msk = (
                 torch.cat([ref_msk] * 2) if do_classifier_free_guidance else ref_msk
             ).to(device, weight_dtype)
-            #print("control_latents shape:", control_latents.shape)
-            #print("ref_image_latentes_conv_in shape:", ref_image_latentes_conv_in.shape)
-            #print("ref_msk shape:", ref_msk.shape)
             control_latents = torch.cat([control_latents, ref_image_latentes_conv_in, ref_msk], dim = 1)
         else:
             ref_image_latentes_conv_in = torch.zeros_like(latents)
