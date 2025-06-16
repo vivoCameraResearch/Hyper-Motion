@@ -160,8 +160,8 @@ At this point we have control_videos and videos_gt two folders.
 ### 7. Text annotation (optional)
 1. Reference fetch_videos_by_id.py collect all text labels from the semantic_label folder.
 2. Since the original text is rather simple and lacks a description of the character's appearance, you can download [InternVL3.0](https://internvl.readthedocs.io/en/latest/internvl3.0/introduction.html) and mark it up yourself.
-# Add HF_ENDPOINT=https://hf-mirror.com before the command if you cannot access to huggingface.com
 ```
+# Add HF_ENDPOINT=https://hf-mirror.com before the command if you cannot access to huggingface.com
 huggingface-cli download OpenGVLab/InternVL3-14B --local-dir-use-symlinks False --local-dir /PATH/TO/INTERNVL3_MODEL
 
 python video_description.py
@@ -235,8 +235,39 @@ python test.py
 cd ../../..
 
 mv ./xpose_batch_inference.py ./XPose
+mv ./xpose_vis_personface.py ./XPose
+mv ./xpose_vis_allpy ./XPose
 ```
+Key Point Detection
+```
+python unipose_video.py \
+  --config /path/to/config/UniPose_SwinT.py \
+  --checkpoint /path/to/unipose_swint.pth \
+  --video_folder /path/to/videos \ # your video
+  --output_dir /path/to/output \ # json
+  --instance_prompt person\ # face, hand
+  --keypoint_type person \ # face, hand
+  --frames_per_clip 8 \
+  --gpu 0
+```
+Visualization to pose video
+```
+# only visual body & face
+python xpose_vis_bodyface.py \
+    --video_dir /path/to/videos \
+    --body_json_dir /path/to/body_json \
+    --face_json_dir /path/to/face_json \
+    --output_dir /path/to/pose_videos
 
+# visual body, face & hand
+python xpose_vis_all.py \
+    --video_dir /path/to/videos \
+    --body_json_dir /path/to/body_json \
+    --hand_json_dir /path/to/hand_json \
+    --face_json_dir /path/to/face_json \
+    --output_dir /path/to/pose_videos
+
+```
 
 ## 😁 Inference
 ### First step
