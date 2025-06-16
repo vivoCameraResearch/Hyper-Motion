@@ -20,7 +20,7 @@ We will complete the review of the training dataset in the near future, and we w
 - [ ] Release the pretrained weights
 - [ ] Release the training file & details (wan-2.1_14B 8*H20 96G sft)
 
-## 👀 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X).
+## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X).
 We are so sorry that due to force majeure caused by company's regulations, we can't upload the processed training set‘s videos directly, but we will give you the complete ways to get the HypermotionX training data from Motion-X.  Including video name ID, original pose annotation, **Follow these steps to process the Motion-X dataset:**
 
 <details>
@@ -93,6 +93,100 @@ Data structure:
   ├── ...
 ```
 At this moment we have all the source data for the hyprtmotionX dataset.
+
+### 4. Initial visualisation as pose videos
+```
+cd train_data_processing
+
+python vis_kpt.py \
+    --video_dir ./data/datasets/filtered_videos \
+    --json_dir ./data/datasets/filered_kpts \
+    --output_dir ./data/datasets/video_pose
+
+python batch_convert_to_h264.py
+    --input_dir ./data/datasets/video_pose \
+    --output_dir ./data/datasets/pose_video \
+
+rm -r ./data/datasets/video_pose
+```
+### 5. Filtering high-frequency motion clips
+Deal with pose_video:
+```
+python cwt_framebased_batch_startend_reencode.py \
+    --video_dir ./data/datasets/pose_video \
+    --json_dir ./data/datasets/filered_kpts \
+    --output_dir ./data/datasets/control_videos \
+    --clip_seconds 6.0 \
+    --keypoint_type body \
+    --max_points 17 \
+    --joint_index 0 \
+    --wavelet morl \
+    --max_scale 128 \
+    --min_spike_width 3 \
+    --shift_margin 10
+```
+Deal with videos:
+```
+python cwt_framebased_batch_startend_reencode.py \
+    --video_dir ./data/datasets/filtered_videos \
+    --json_dir  ./data/datasets/filered_kpts \
+    --output_dir ./data/datasets/videos \
+    --clip_seconds 6.0 \
+    --keypoint_type body \
+    --max_points 17 \
+    --joint_index 0 \
+    --wavelet morl \
+    --max_scale 128 \
+    --min_spike_width 3 \
+    --shift_margin 10
+```
+### 6. Add OCR Gaussian Blur Mask (optional)
+```
+python ocr_mask.py
+    --input_dir ./data/datasets/videos \
+    --output_dir ./data/datasets/gt_videos \
+    --device gpu --blur_strength 51
+
+rm -r ./data/datasets/videos
+```
+# If vscode dosen't show videos, please run the scripts
+```
+python batch_convert_to_h264.py
+    --input_dir ./data/datasets/gt_videos \
+    --output_dir ./data/datasets/videos_gt \
+```
+At this point we have control_videos and videos_gt two folders.
+
+### 7. Text annotation (optional)
+1. Reference fetch_videos_by_id.py collect all text labels from the semantic_label folder.
+2. Since the original text is rather simple and lacks a description of the character's appearance, you can download [InternVL3.0](https://internvl.readthedocs.io/en/latest/internvl3.0/introduction.html) and mark it up yourself.
+# Add HF_ENDPOINT=https://hf-mirror.com before the command if you cannot access to huggingface.com
+```
+huggingface-cli download OpenGVLab/InternVL3-14B --local-dir-use-symlinks False --local-dir /PATH/TO/INTERNVL3_MODEL
+
+python video_description.py
+    --video_folder ./data/datasets/videos_gt  \
+    --output_folder   ./data/datasets/og_text  \
+    --model_path /PATH/TO/INTERNVL3_MODEL \
+    --num_workers 1 \
+    --batch_size 64
+```
+3. Prompt words beautification
+# Download it from https://huggingface.co/NousResearch/Meta-Llama-3-8B-Instruct or https://www.modelscope.cn/models/LLM-Research/Meta-Llama-3-8B-Instruct to /path/to/your_llm
+```
+python process_llama.py
+    --model_path /path/to/your_llm \
+    --input_folder ./data/datasets/og_text \
+    --output_folder ./data/datasets/text --gpu 0
+```
+### 🎊 Successfully accomplished 🎉🎉🎉
+```
+/data/datasets/
+  ├── videos_gt
+  ├── control_videos
+  ├── videos_gt
+```
+At this point we have successfully obtained all the training data!
 
 </details>
 
