@@ -338,6 +338,9 @@ Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-F
 
 Also thanks to [UniAnimate](https://github.com/ali-vilab/UniAnimate) and [FollowYourPose](https://github.com/mayuelala/FollowYourPose).
 
+## 😊 License
+All the materials, including code, checkpoints, and demo, are made available under the [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. You are free to copy, redistribute, remix, transform, and build upon the project for non-commercial purposes, as long as you give appropriate credit and distribute your contributions under the same license.
+
 ## 🌏 Citation
 <pre> 
   @misc{xu2025hypermotion,
