@@ -455,7 +455,7 @@ class WanSelfAttention(nn.Module):
         x = attention(
             #q=rope_apply(q, grid_sizes, freqs).to(dtype),
             #k=rope_apply(k, grid_sizes, freqs).to(dtype),
-            q=rope_apply_with_alllens(q, grid_sizes, freqs, self.motion_scale, self.space_scale_factor).to(dtype), # use SLF_ROPE
+            q=rope_apply_with_alllens(q, grid_sizes, freqs, self.motion_scale, self.space_scale_factor).to(dtype), # use SLF_ROPE You can try not applying low-frequency enhancement in inference
             k=rope_apply_with_alllens(k, grid_sizes, freqs, self.motion_scale, self.space_scale_factor).to(dtype), # use SLF_ROPE
             v=v.to(dtype),
             k_lens=seq_lens,
