@@ -220,6 +220,8 @@ pip install -r requirements.txt
 hyper-wan2.1-14B(asap,Review and upload will take some time)
 
 ## 🗿 Inference data preparation
+### Why use [Xpose](https://github.com/IDEA-Research/X-Pose)?
+Because Xpose is much more accurate than Dwpose, it generalizes more, and is suitable for children, animals, anthropomorphic characters, and complex motion.
 ### How to use [Xpose](https://github.com/IDEA-Research/X-Pose) to get Pose video
  You can download the pretrained weights of Xpose from [here](https://drive.google.com/file/d/13gANvGWyWApMFTAtC3ntrMgx0fOocjIa/view) and put it under `./XPose/weights`.
 ```
@@ -266,7 +268,6 @@ python xpose_vis_all.py \
     --hand_json_dir /path/to/hand_json \
     --face_json_dir /path/to/face_json \
     --output_dir /path/to/pose_videos
-
 ```
 
 ## 😁 Inference
