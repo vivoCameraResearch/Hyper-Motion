@@ -10,17 +10,19 @@ This repository is the official implementation of [HyperMotion](https://vivocame
 ## 📣 News:
 We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.
 ### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!
-We will complete the review of the training dataset in the near future, and we will release the bench data to the applicants first.
+
 ## ✅ To-Do List for HyperMotion Release
 
 - [✅] Release the Open-HypermotionX dataset
 - [✅] Release the HypermotionX bench
 - [✅] Release the source code
 - [✅] Release the inference file
+- [✅] Release the Xpose process scripts
+- [✅] Release the training data Full processing scripts
 - [ ] Release the pretrained weights
 - [ ] Release the training file & details (wan-2.1_14B 8*H20 96G sft)
 
-## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X).
+## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) (easy).
 We are so sorry that due to force majeure caused by company's regulations, we can't upload the processed training set‘s videos directly, but we will give you the complete ways to get the HypermotionX training data from Motion-X.  Including video name ID, original pose annotation, **Follow these steps to process the Motion-X dataset:**
 
 <details>
@@ -255,7 +257,7 @@ python unipose_video.py \
 Visualization to pose video
 ```
 # only visual body & face
-python xpose_vis_bodyface.py \
+python xpose_vis_personface.py \
     --video_dir /path/to/videos \
     --body_json_dir /path/to/body_json \
     --face_json_dir /path/to/face_json \
