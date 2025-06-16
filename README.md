@@ -2,6 +2,7 @@
 This repository is the official implementation of [HyperMotion](https://vivocameraresearch.github.io/hypermotion/)
 
 <a href="https://arxiv.org/abs/2505.22977"><img src='https://img.shields.io/badge/arXiv-2505.22977-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'></a>&nbsp;
+<a href="https://huggingface.co/shuolin/HyperMotion"><img src='https://img.shields.io/badge/Hugging Face-ckpts-orange?style=flat&logo=HuggingFace&logoColor=orange' alt='huggingface'></a>&nbsp;
 <a href='https://vivocameraresearch.github.io/hypermotion/'>
   <img src='https://img.shields.io/badge/Project-Page-pink?style=flat&logo=Google%20chrome&logoColor=pink'></a>
 <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src='https://img.shields.io/badge/License-CC BY--NC--SA--4.0-lightgreen?style=flat&logo=Lisence' alt='License'></a>&nbsp;
@@ -9,6 +10,13 @@ This repository is the official implementation of [HyperMotion](https://vivocame
 
 ## 📣 News:
 We'll be open-sourcing model weights, inference/train scripts, and methods for obtaining pose sequences in June 2025.
+🎉 We have sent data to the first batch of applicants!
+🎉 Now you can download the weights from 🤗[**HuggingFace**](https://huggingface.co/shuolin/HyperMotion).
+
+<div align="center">
+  <img src="asset/model.png" width="100%" height="100%"/>
+</div>
+
 ### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!
 
 ## ✅ To-Do List for HyperMotion Release
@@ -19,7 +27,7 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 - [✅] Release the inference file
 - [✅] Release the Xpose process scripts
 - [✅] Release the training data Full processing scripts
-- [ ] Release the pretrained weights
+- [✅ ] Release the pretrained weights
 - [ ] Release the training file & details (wan-2.1_14B 8*H20 96G sft)
 
 ## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) (easy).
@@ -228,10 +236,10 @@ pip install -r requirements.txt
 
 ## ⬇️ Checkpoint download
 
-hyper-wan2.1-14B(asap,Review and upload will take some time)
+### [hyper-wan2.1-14B-1.0](https://huggingface.co/shuolin/HyperMotion)
 ```
 # Add HF_ENDPOINT=https://hf-mirror.com before the command if you cannot access to huggingface.com
-huggingface-cli download ... --local-dir-use-symlinks False --local-dir /PATH/TO/ckpts
+huggingface-cli download shuolin/HyperMotion --local-dir ./ckpts
 ```
 
 ## 🗿 Inference data preparation
@@ -283,6 +291,10 @@ python xpose_vis_all.py \
     --hand_json_dir /path/to/hand_json \
     --face_json_dir /path/to/face_json \
     --output_dir /path/to/pose_videos
+
+python batch_convert_to_h264.py
+    --input_dir /path/to/pose_videos \
+    --output_dir /path/to/pose_video \
 ```
 
 ## 😁 Inference
@@ -318,6 +330,8 @@ python inference_batch.py
 
 ## 😘 Acknowledgement
 Our code is modified based on [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main). We adopt [Wan2.1-I2V-14B](https://github.com/Wan-Video/Wan2.1) as the base model. And we referenced [UniAnimate](https://github.com/ali-vilab/UniAnimate), Our data is inherited from [Motion-X](https://github.com/IDEA-Research/Motion-X), then we use [EasyOCR](https://github.com/JaidedAI/EasyOCR) to deal with videos, and [InternVL2](https://github.com/OpenGVLab/InternVL) to generate text dic. We use [Xpose](https://github.com/IDEA-Research/X-Pose) to generate pose video. Thanks to all the contributors! Special thanks to [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun/tree/main), without that work as a foundation there would be no work for us!
+
+Also thanks to [UniAnimate](https://github.com/ali-vilab/UniAnimate) and [FollowYourPose](https://github.com/mayuelala/FollowYourPose).
 
 ## 🌏 Citation
 <pre> 
