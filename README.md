@@ -32,7 +32,8 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 - [✅] Release the inference file
 - [✅] Release the Xpose process scripts
 - [✅] Release the training data Full processing scripts
-- [✅ ] Release the pretrained weights
+- [✅] Release the pretrained weights
+- [] Release the resize pose code
 - [ ] Release the training file & details (wan-2.1_14B 8*H20 96G sft)
 
 ## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) (easy).
@@ -270,7 +271,7 @@ mv ./xpose_vis_allpy ./XPose
 ```
 Key Point Detection
 ```
-python unipose_video.py \
+python xpose_batch_inference.py \
   --config /path/to/config/UniPose_SwinT.py \
   --checkpoint /path/to/unipose_swint.pth \
   --video_folder /path/to/videos \ # your video
