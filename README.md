@@ -33,7 +33,7 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 - [✅] Release the Xpose process scripts
 - [✅] Release the training data Full processing scripts
 - [✅] Release the pretrained weights
-- [] Release the resize pose code
+- [ ] Release the resize pose code
 - [ ] Release the training file & details (wan-2.1_14B 8*H20 96G sft)
 
 ## 😘 How to get Open-HyperMotionX training dataset from [Motion-X](https://github.com/IDEA-Research/Motion-X) (easy).
