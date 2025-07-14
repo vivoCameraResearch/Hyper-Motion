@@ -18,9 +18,7 @@ We'll be open-sourcing model weights, inference/train scripts, and methods for o
 🎉 We have sent data to the first batch of applicants!  
 🎉 Now you can download the weights from 🤗[**HuggingFace**](https://huggingface.co/shuolin/HyperMotion).
 
-<div align="center">
-  <img src="demo/baseline.png" width="100%" height="100%"/>
-</div>
+![baseline](demo/baseline.png)
 
 ### The Open-HypermotionX training dataset and the HypermotionX bench are available at [this application link](https://docs.google.com/forms/d/e/1FAIpQLSfWK4a7GqI-Yc8GIWcYmUcmZgdnI-vIYQZ1wrXJNQCrDtABQA/viewform?usp=header)!!!
 
